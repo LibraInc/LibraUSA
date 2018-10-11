@@ -1,0 +1,45 @@
+
+
+function openMenu() {
+  var menu = document.getElementById("mainMenu");
+  if (menu) {
+    menu.className=(menu.className=='hide')?'show':'hide';
+  }
+}
+function openUser() {
+    var user = document.getElementById("userMenu");
+    if (user) {
+      user.className=(user.className=='hide')?'show':'hide';
+    }
+}
+function showSearch() {
+    var item = document.getElementById("searchBar");
+    if (item) {
+      item.className=(item.className=='hide')?'show':'hide';
+    }
+}
+
+
+/* toggle Category Sidebar */
+function openCategories() {
+  document.getElementById("catSidebar").style.width = "250px";
+  document.getElementById("content").style.marginLeft = "250px";
+}
+function closeCategories() {
+  document.getElementById("catSidebar").style.width = "0px";
+  document.getElementById("content").style.marginLeft = "0px";
+}
+
+// media Queries
+function viewportChange() {
+  var vpw = window.innerWidth;
+  if (vpw < 720) {
+    // scripts
+    closeCategories();
+  }
+  if (vpw > 720) {
+    // scripts
+    openCategories();
+  }
+}
+viewportChange();

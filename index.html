@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Libra USA - Business-to-Business Closeout Wholesaler</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Federo|Catamaran|Work+Sans" rel="stylesheet">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body id="home" onresize="viewportChange()">
+
+    <header class="top-nav">
+
+        <section class="brand">
+            <a href="#">
+        <img src="./img/brand/logo.png" alt="[logo]">
+      </a>
+        </section>
+
+        <a class="menu-icon" href="javascript:void(0);" onclick="openMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <section class="main-menu">
+            <nav id="mainMenu" class="hide">
+                <a href="#">Buy<span class="long"> from</span> LIBRA</span></a>
+                <a href="#">Sell<span class="long"> to</span> LIBRA</a>
+                <a href="#">Events</a>
+                <div class="dropdown">
+                    <a href="#">Company<span class="long"><i class="fa fa-caret-down"></i></span></a>
+                    <div class="dropdown-content">
+                        <a href="#">About Us</a>
+                        <a href="#">Showroom locations</a>
+                        <a href="#">Employee Oppurtunities</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+                <a href="#">Contact<span class="long"> Us</span></a>
+            </nav>
+        </section>
+
+        <a class="search-icon" href="javascript:void(0);" onclick="showSearch()">
+          <i class="fa fa-search"></i>
+        </a>
+        <section class="search">
+            <form class="search-form">
+                <input class="search-input" type="search" placeholder="Search" aria-label="Search">
+                <button class="search-btn" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </section>
+
+        <section class="user-menu">
+            <nav id="userMenu" class="hide">
+                <a href="#" onclick="loginUser()">Login</a>
+                <a href="#">New Customer</a>
+                <a href="#">Cart</a>
+                <a href="#">My PNS</a>
+                <a href="#">New Products</a>
+                <a href="#">Subscription</a>
+                <a href="#">Account Settings</a>
+                <a href="#" onclick="logOut()">Log Out</a>
+            </nav>
+        </section>
+        <a class="user-icon" href="javascript:void(0);" onclick="openUser()">
+          <i class="fa fa-user"></i>
+          <!-- <i class="fa fa-caret-down"></i> -->
+        </a>
+    </header>
+
+    <!-- <nav class="sidebar-full">
+
+  </nav> -->
+
+    <main>
+
+        <nav id="catSidebar" class="sidebar-inner">
+            <ul>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeCategories()">
+            <i class="fa fa-times"></i>
+          </a>
+                <li><a class="cat-header" href="#kccategory">Catagories</a></li>
+                <li>
+                    <a data-toggle="collapse" href="#kccategory">Kitchen Classics</a>
+                    <ul id="kccategory" class="subcategory collapse">
+                        <li><a href="#">Ovenware</a></li>
+                        <li><a href="#">Food Storage</a></li>
+                        <li><a href="#">Mix and Measure</a></li>
+                        <li><a href="#">Sets and Value Packs</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a data-toggle="collapse" href="#kwcategory">Closeout Kitchenware</a>
+                    <ul id="kwcategory" class="subcategory collapse">
+                        <li><a href="#">Glass Bakeware</a></li>
+                        <li><a href="#">Metal Bakeware</a></li>
+                        <li><a href="#">Cookware</a></li>
+                        <li><a href="#">Food Storage</a></li>
+                        <li><a href="#">Food Prep & Gadgets</a></li>
+                        <li><a href="#">Cutlery</a></li>
+                        <li><a href="#">Pantry</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a data-toggle="collapse" href="#gwcategory">Closeout Glassware</a>
+                    <ul id="gwcategory" class="subcategory collapse">
+                        <li><a href="#">Open Stock Glassware</a></li>
+                        <li><a href="#">Glass Vases</a></li>
+                        <li><a href="#">Glasssware Sets</a></li>
+                        <li><a href="#">Candle Holders & Votives</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Closeout Cleaning Supplies</a></li>
+                <li><a href="#">Housewares and Plastics</a></li>
+                <li><a href="#">Hydration</a></li>
+                <li><a href="#">Tabletop and Dinnerware</a></li>
+                <li>
+                    <a data-toggle="collapse" href="#homecategory">Home & Accessories Closouts</a>
+                    <ul id="homecategory" class="subcategory collapse">
+                        <li><a href="#">Home Storage & Organization</a></li>
+                        <li><a href="#">Home Accessories</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Seasonal Merchandise</a></li>
+                <li><a href="#">Toys, Games and Sporting Goods</a></li>
+                <li><a href="#">Closeouts - Odds and Ends</a></li>
+                <li><a href="#">Appliances & Electronics</a></li>
+                <li><a href="#">Licensed Goods Closeouts</a></li>
+            </ul>
+        </nav>
+        <a href="javascript:void(0);" id="catIcon" class="mobileIcon" onclick="openCategories()">
+          <i class="icon fa fa-caret-left"></i>
+          <p>Catagories</p>
+      </a>
+
+        <section id="content" class="content">
+
+            <section class="hero">
+                <div class="slideshow">
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 6</div>
+                        <img src="./img/slideshow/slideshow_image_1.jpg">
+                        <div class="text providing">Providing Retailers Worldwide Strong Merchandising Values Since 1987</div>
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 6</div>
+                        <img src="./img/slideshow/slideshow_image_2.jpg">
+                        <div class="text offering">Offering Brand Name Closeouts from top USA Manufacturers</div>
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 6</div>
+                        <img src="./img/slideshow/slideshow_image_3.jpg">
+                        <div class="text saving">Saving Retailers 35%-85% off wholesale</div>
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 6</div>
+                        <img src="./img/slideshow/slideshow_image_4.jpg">
+                        <div class="text showing">Showing 100's of new items arriving monthly</div>
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 6</div>
+                        <img src="./img/slideshow/slideshow_image_5.jpg">
+                        <div class="text guaranteeing">Guaranteeing possession of every item offered for sale</div>
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 6</div>
+                        <img src="./img/slideshow/slideshow_image_5.jpg">
+                        <div class="text gone">Once the product is gone, it's gone for good</div>
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                </div>
+            </section>
+
+            <section class="cards">
+                <div class="card">
+                    <img src="./img/relationships/handshake.jpg" alt="#">
+                    <h5>New Customer?</h5>
+                    <h6>Reach out to our sales team and get signed up for our exclusive Product Notification System.</h6>
+                    <a href="#">Submit Info</a>
+                </div>
+                <div class="card">
+                    <img src="./img/jobs/JobsAd01.jpg" alt="#">
+                    <h5>Looking for Work?</h5>
+                    <h6>We are looking for ambitious and motivated employees to push our vision of success to higher grounds.</h6>
+                    <a href="#">Apply Here</a>
+                </div>
+                <div class="card">
+                    <img src="./img/events/ASDmarketweek.jpg" alt="#">
+                    <h5>New Event</h5>
+                    <h6>Come see us at our next show and you can see our amazing products and ask our friendly sales team anything.</h6>
+                    <a href="#">See Events</a>
+                </div>
+            </section>
+
+            <section class="featured">
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
