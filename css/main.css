@@ -1,42 +1,5 @@
 
-/* Skeleton Excerpt */
 
-/*
-* Skeleton V2.0.4
-* Copyright 2014, Dave Gamache
-* www.getskeleton.com
-* Free to use under the MIT license.
-* http://www.opensource.org/licenses/mit-license.php
-* 12/29/2014
-*/
-
-
-/* Table of contents
-––––––––––––––––––––––––––––––––––––––––––––––––––
-- Grid
-- flex
-- Base Styles
-- Typography
-- Links
-- Buttons
-- Forms
-- Lists
-- Code
-- Tables
-- Spacing
-- Utilities
-- Clearing
-- Header
-- Sidebar
-- Main
-- Widgets
-- Footer
-- Media Queries
-*/
-
-
-/* Grid
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
   position: relative;
   width: 100%;
@@ -44,13 +7,15 @@
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
+/* Grid
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .column,
 .columns {
   width: 100%;
   float: left;
   box-sizing: border-box; }
 
-/* Flex           added by:David Schimke
+/* Flex
    Containers ------------------------------------- */
 .flex {display: flex;}
 .flex-inline {display: inline-flex;}
@@ -93,7 +58,7 @@
   .flex-inline.column-rev {flex-direction: column-reverse;}
 }
 
-/* Flex           added by:David Schimke
+/* Flex
    Items ------------------------------------- */
 
 .flex>.grow-1 {flex-grow: 1;}
@@ -197,10 +162,10 @@ html {
   padding: 0;
 }
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 1.6em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", "Open Sans", "Work Sans", Helvetica, Arial, sans-serif;
   color: #222;
   }
 
@@ -209,7 +174,7 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 2.0rem;
   font-weight: 300; }
 h1 { font-family: 'Open Sans', sans-serif; font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
 h2 { font-family: 'Roboto', font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
@@ -236,7 +201,8 @@ p {
   margin-top: 0; }
 
 i {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  padding: 0 .8rem;
 }
 
 /* Links
@@ -270,7 +236,7 @@ input[type="reset"],
 input[type="button"] {
   display: inline-block;
   height: 38px;
-  padding: 0 15px;
+  padding: 0 2px;
   color: #555;
   text-align: center;
   font-size: 11px;
@@ -295,6 +261,12 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
+  position: relative;
+  top: -1px;
+  left: -1px;
+  -moz-box-shadow: 1px 1px 2px 0px #aaa;
+	-webkit-box-shadow: 1px 1px 2px 0px #aaa;
+	box-shadow: 1px 1px 2px 0px #aaa;
   color: #333;
   border-color: #888;
   outline: 0; }
@@ -752,23 +724,35 @@ header.top-nav {
     padding: 1rem;
     position: absolute;
     display: flex;
+    width: auto;
+    height: 24px;
     z-index: 10;
+    align-items: center;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0px 20px 20px 0px;
+    transition: 0.6s ease;
   }
   #catIcon p {
-    padding-left: 1rem;
+    margin-bottom: 0;
+    display: none;
+    }
+  #catIcon:hover p {
+    display: block;
   }
+
   .sidebar-inner {
     height: 100%;
     width: 250px;
     position: absolute;
     z-index: 100;
     left: 0;
-    background-color: #fbfbfb;
+    background-color: #ededed;
     padding: 0px;
     transition: 0.3s;
     overflow: hidden;
     }
-  .sidebar-inner a {padding: 4px 6px 4px 4px;
+  .sidebar-inner a {padding: 4px;
     text-decoration: none;
     font-size: 14px;
     color: #333;
@@ -780,26 +764,47 @@ header.top-nav {
     background-color: #eee;
     overflow: hidden;
     list-style-type:none;
-    margin-left: 0px;
+    margin: 0px;
     padding-left: 0px;
     transition: 0.3s;
   }
   .sidebar-inner li {
-    padding-left: 0 8px;
-    margin-bottom: 8px;
+    padding: 8px 0 0;
+    margin-bottom: 0px;
+    border-bottom: solid 1px #eee;
   }
   .sidebar-inner ul>li>ul {
     background-color: #fff;
   }
-  .sidebar-inner ul>li>ul>li {padding-left: 8px;}
-  .sidebar-inner ul>li>ul>li>a {color: #133d8d;}
+
+.sidebar-inner ul>li {
+  background-image: -webkit-linear-gradient(180deg, rgba(240,240,240,1) 0, rgba(230,230,230,1) 100%);
+  background-image: -moz-linear-gradient(180deg, rgba(240,240,240,1) 0, rgba(230,230,230,1) 100%);
+  background-image: linear-gradient(180deg, rgba(240,240,240,1) 0, rgba(230,230,230,1) 100%);
+  background-position: 50% 50%;
+  }
+.sidebar-inner ul>li>ul>li {
+  background-image: -webkit-linear-gradient(180deg, rgba(246,246,246,1) 0, rgba(255,255,255,1) 100%);
+  background-image: -moz-linear-gradient(180deg, rgba(246,246,246,1) 0, rgba(255,255,255,1) 100%);
+  background-image: linear-gradient(180deg, rgba(246,246,246,1) 0, rgba(255,255,255,1) 100%);
+  background-position: 50% 50%;
+  }
+
+  .sidebar-inner ul>li>ul>li a {
+    padding-left: 8px;
+    color: #133d8d;
+    }
   .closebtn {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: .5rem;
+    right: .5rem;
   }
   .sidebar-inner li:hover {
     background-color: #143d8d;
+    background: rgb(30,87,153); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
   }
   .sidebar-inner li:hover>a {
     color: #fff;
