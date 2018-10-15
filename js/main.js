@@ -1,5 +1,3 @@
-
-
 function openMenu() {
   var menu = document.getElementById("mainMenu");
   if (menu) {
